@@ -104,6 +104,15 @@ class CompositionalViewController: UIViewController {
             //可讓group橫向滾動
             section.orthogonalScrollingBehavior = .continuous
             
+            
+            //加入標題 有點像是建一個header 要註冊 要實現delegate viewForSupplementaryElementOfKind
+            section.boundarySupplementaryItems = [.init(layoutSize:
+                                                            NSCollectionLayoutSize(
+                                                                widthDimension: .fractionalWidth(1),
+                                                                heightDimension: .absolute(60)),
+                                                        elementKind: "catergoryHeaderId",
+                                                        alignment: .topLeading)]
+            
             return section
         
         }()
@@ -150,6 +159,9 @@ class CompositionalViewController: UIViewController {
         
 //        let collectionView = UICollectionView(frame: .zero, collectionViewLayout:collectionViewLayout )
         collectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: CollectionViewCell.identifier)
+        
+        //一個identifier for HeaderCell 一個for Section 那裡
+        collectionView.register(Header.self, forSupplementaryViewOfKind: "catergoryHeaderId", withReuseIdentifier: "headerID")
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.frame = view.bounds
@@ -161,11 +173,12 @@ class CompositionalViewController: UIViewController {
 
 
 
-
-
-
-
 extension CompositionalViewController:UICollectionViewDataSource,UICollectionViewDelegate{
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "headerID", for: indexPath)
+        return header
+    }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         6

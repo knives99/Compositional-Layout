@@ -15,6 +15,7 @@
 		939D66BF274F764A00F900DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 939D66BD274F764A00F900DB /* LaunchScreen.storyboard */; };
 		939D66C7274F76C900F900DB /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939D66C6274F76C900F900DB /* CollectionViewCell.swift */; };
 		939D66C9274F7FAE00F900DB /* CompositionalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939D66C8274F7FAE00F900DB /* CompositionalViewController.swift */; };
+		939D67192750DA8F00F900DB /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939D67182750DA8F00F900DB /* Header.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		939D66C0274F764A00F900DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		939D66C6274F76C900F900DB /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		939D66C8274F7FAE00F900DB /* CompositionalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionalViewController.swift; sourceTree = "<group>"; };
+		939D67182750DA8F00F900DB /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +46,7 @@
 		939D66A6274F764800F900DB = {
 			isa = PBXGroup;
 			children = (
+				939D67182750DA8F00F900DB /* Header.swift */,
 				939D66B1274F764800F900DB /* CollectionViewDemo */,
 				939D66B0274F764800F900DB /* Products */,
 			);
@@ -148,6 +151,7 @@
 				939D66B3274F764800F900DB /* AppDelegate.swift in Sources */,
 				939D66C7274F76C900F900DB /* CollectionViewCell.swift in Sources */,
 				939D66C9274F7FAE00F900DB /* CompositionalViewController.swift in Sources */,
+				939D67192750DA8F00F900DB /* Header.swift in Sources */,
 				939D66B5274F764800F900DB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
